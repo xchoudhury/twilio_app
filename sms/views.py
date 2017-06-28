@@ -22,4 +22,4 @@ def send_sms(request):
 @api_view(['GET', 'POST'])
 def receive_sms(request):
     resp = MessagingResponse().message("Hello there person!")
-    return str(resp)
+    return Response(str(resp))
