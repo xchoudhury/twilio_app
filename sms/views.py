@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from django.http import HttpResponse
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
 from rest_framework import status
@@ -22,4 +23,4 @@ def send_sms(request):
 @api_view(['GET', 'POST'])
 def receive_sms(request):
     resp = MessagingResponse().message("Hello there person!")
-    return Response(str(resp))
+    return HttpResponse(str(resp))
