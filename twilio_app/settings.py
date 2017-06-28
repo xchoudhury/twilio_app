@@ -26,6 +26,11 @@ SECRET_KEY = "tl!=@8h-z@r@#a!a@8d_k(41kwj82=2#@@kk$mzwj(s@^h&+-k"
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+# Twilio Settings
+TWILIO_ACCOUNT_SID = "AC0db93319fa3eb0d557d8bf8c07f25c18"
+TWILIO_AUTH_TOKEN = "89bbdfb442f2207cc34dcaec6785b7f9"
+TWILIO_PHONE_NUMBER = "+13394997685"
+
 # Application definition
 
 INSTALLED_APPS = [
@@ -39,7 +44,10 @@ INSTALLED_APPS = [
     # http://whitenoise.evans.io/en/stable/django.html#using-whitenoise-in-development
     'whitenoise.runserver_nostatic',
     'django.contrib.staticfiles',
-    'rest_framework'
+    'rest_framework',
+    'base',
+    'sms',
+    'users'
 ]
 
 MIDDLEWARE = [

@@ -4,7 +4,7 @@ from . import views
 
 urlpatterns = [
     url(
-        r'^',
+        r'^$',
         views.home_page,
         name='home_page'
     ),
